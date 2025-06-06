@@ -343,6 +343,7 @@ nav {
 
 .about-image {
     width: 100%;
+    background: var(--background);
     height: auto;
     object-fit: cover;
     border-radius: var(--radius-lg);
