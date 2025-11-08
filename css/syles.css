@@ -610,8 +610,7 @@ footer {
 .btn-add-project:active {
   transform: translateY(2px);
   box-shadow: none;
-}
-.project-title {
+}.project-title {
   font-size: var(--text-xl);
   margin-bottom: var(--space-sm);
   color: var(--primary);
@@ -622,6 +621,7 @@ footer {
   text-align: justify;
   margin-bottom: var(--space-sm);
 }
+
 .project-link {
   display: inline-block;
   margin-top: var(--space-sm);
@@ -633,3 +633,4 @@ footer {
 .project-link:hover {
   text-decoration: underline;
 }
+
