@@ -3,35 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO Meta Tags -->
   <title>Banqour Atika | Portfolio</title>
-  <meta name="description" content="#Description" />
-  <meta name="keywords" content="#Keywords" />
+  <meta name="description" content="Portfolio de Banqour Atika, développeuse informatique spécialisée en mobile." />
   <meta name="author" content="Banqour Atika" />
-
-  <!-- Open Graph | Social Media Meta Tags -->
-  <meta property="og:title" content="Banqour Atika" />
-  <meta property="og:description" content="#Description" />
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="#URL" />
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/syles.css" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/Favicon.png">
-
-  <!-- Font Google -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/Favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=Cal+Sans&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
 </head>
 <body>
-  <!-- Particles Background -->
   <div id="particles-js"></div>
 
   <header>
@@ -40,9 +22,11 @@
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
           <li><a href="#hero" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#profile" class="nav-link">Développeuse Informatique</a></li>
+          <li><a href="#profile" class="nav-link">Technicienne Spécialisée (2 ans)</a></li>
+          <li><a href="#profile" class="nav-link">Bachelor Développement Mobile (1 an)</a></li>
+          <li><a href="#profile" class="nav-link">Bac+3 en tout</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -67,24 +51,52 @@
       </div>
     </section>
 
-    <!-- About, Skills, Contact Sections (unchanged) -->
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">My <span class="text-primary">Skills</span></h2>
+        <div class="skills-grid">
+          <!-- Tes cartes de compétences ici -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ Nouvelle section Profil -->
+    <section id="profile" class="section">
+      <div class="container">
+        <h2 class="section-title">Mon <span class="text-primary">Parcours</span></h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Développeuse Informatique passionnée, j’ai suivi une formation de 2 ans en tant que Technicienne Spécialisée,
+              puis obtenu un Bachelor en Développement Mobile (1 an). Mon parcours totalise un Bac+3 solide, combinant
+              compétences techniques, créativité et rigueur professionnelle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Projects Section -->
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title">My <span class="text-primary">Projects</span></h2>
         <button id="add-project-btn" class="btn-add-project">Add Project</button>
-
-        <div class="projects-grid">
-          <!-- Existing project cards -->
-        </div>
-
         <div id="dynamic-projects" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Get In <span class="text-primary">Touch</span></h2>
+        <div class="contact-content">
+          <!-- Tes liens de contact ici -->
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <h1 class="logo">Banqour Atika</h1>
     <div class="footer-bottom">
@@ -96,73 +108,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/particles.js"></script>
-
-  <!-- Add Project Script -->
-  <script>
-    document.getElementById("add-project-btn").addEventListener("click", function () {
-      const container = document.getElementById("dynamic-projects");
-
-      const project = document.createElement("div");
-      project.className = "project-card";
-      project.innerHTML = `
-        <img src="https://fakeimg.deblan.org/400x200/cccccc/cccccc.png&text=New+Project" alt="project-image" class="project-image">
-        <div class="project-content">
-          <h5 class="title">New Project Title</h5>
-          <p class="subtitle">Short description of your new project.</p>
-          <a href="https://github.com/winner16/your-project" target="_blank">View on GitHub</a>
-        </div>
-      `;
-
-      container.appendChild(project);
-    });
-  </script>
-  <!-- Autres scripts -->
-<script src="js/scripts.js"></script>
-<script src="js/particles.js"></script>
-
-<!-- ✅ Ton script personnalisé -->
-<script>
-  document.getElementById("add-project-btn").addEventListener("click", function () {
-    const container = document.getElementById("dynamic-projects");
-
-    const project = document.createElement("div");
-    project.className = "project-card";
-    project.innerHTML = `
-      <img src="https://fakeimg.deblan.org/400x200/cccccc/cccccc.png&text=New+Project" alt="project-image" class="project-image">
-      <div class="project-content">
-        <h5 class="project-title">New Project Title</h5>
-        <p class="project-description">Short description of your new project.</p>
-        <a href="https://github.com/winner16/your-project" target="_blank">View on GitHub</a>
-      </div>
-    `;
-    
-    container.appendChild(project);
-  });
-</script>
-<!-- Autres scripts -->
-<script src="js/scripts.js"></script>
-<script src="js/particles.js"></script>
-
-<!-- ✅ Ton script personnalisé -->
-<script>
-  document.getElementById("add-project-btn").addEventListener("click", function () {
-    const container = document.getElementById("dynamic-projects");
-
-    const project = document.createElement("div");
-    project.className = "project-card";
-    project.innerHTML = `
-      <img src="https://fakeimg.deblan.org/400x200/cccccc/cccccc.png&text=New+Project" alt="project-image" class="project-image">
-      <div class="project-content">
-        <h5 class="project-title">New Project Title</h5>
-        <p class="project-description">Short description of your new project.</p>
-        <a href="https://github.com/winner16/your-project" target="_blank">View on GitHub</a>
-      </div>
-    `;
-    
-    container.appendChild(project);
-  });
-</script>
-  </body>
+</body>
 </html>
-
-
