@@ -116,5 +116,53 @@
       container.appendChild(project);
     });
   </script>
-</body>
+  <!-- Autres scripts -->
+<script src="js/scripts.js"></script>
+<script src="js/particles.js"></script>
+
+<!-- ✅ Ton script personnalisé -->
+<script>
+  document.getElementById("add-project-btn").addEventListener("click", function () {
+    const container = document.getElementById("dynamic-projects");
+
+    const project = document.createElement("div");
+    project.className = "project-card";
+    project.innerHTML = `
+      <img src="https://fakeimg.deblan.org/400x200/cccccc/cccccc.png&text=New+Project" alt="project-image" class="project-image">
+      <div class="project-content">
+        <h5 class="project-title">New Project Title</h5>
+        <p class="project-description">Short description of your new project.</p>
+        <a href="https://github.com/winner16/your-project" target="_blank">View on GitHub</a>
+      </div>
+    `;
+    
+    container.appendChild(project);
+  });
+</script>
+<!-- Autres scripts -->
+<script src="js/scripts.js"></script>
+<script src="js/particles.js"></script>
+
+<!-- ✅ Ton script personnalisé -->
+<script>
+  document.getElementById("add-project-btn").addEventListener("click", function () {
+    const container = document.getElementById("dynamic-projects");
+
+    const project = document.createElement("div");
+    project.className = "project-card";
+    project.innerHTML = `
+      <img src="https://fakeimg.deblan.org/400x200/cccccc/cccccc.png&text=New+Project" alt="project-image" class="project-image">
+      <div class="project-content">
+        <h5 class="project-title">New Project Title</h5>
+        <p class="project-description">Short description of your new project.</p>
+        <a href="https://github.com/winner16/your-project" target="_blank">View on GitHub</a>
+      </div>
+    `;
+    
+    container.appendChild(project);
+  });
+</script>
+  </body>
 </html>
+
+
