@@ -1,32 +1,26 @@
-// Wait for DOM to be fully loaded
+// ✅ Attendre que le DOM soit chargé
 document.addEventListener("DOMContentLoaded", function () {
-    // Initialize all components
-    themeToggle();
-    typedText();
+    const themeToggle = document.getElementById("themeToggle");
+    if (themeToggle) {
+        themeToggle.addEventListener("click", function () {
+            const newTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
+            setTheme(newTheme);
+        });
+    }
+
     mobileMenu();
+    typedText();
+    particlesJavaScript();
 });
 
-// Dark & Light Mode
-function themeToggle() {
-    const themeToggle = document.querySelector("#themeToggle");
-    if (!themeToggle) return;
-
-    const savedTheme = localStorage.getItem("theme") || "dark";
-    setTheme(savedTheme);
-
-    themeToggle.addEventListener("click", function() {
-        const newTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
-        setTheme(newTheme);
-    });
-}
-
+// ✅ Fonction pour changer le thème
 function setTheme(theme) {
     document.body.dataset.theme = theme;
     localStorage.setItem("theme", theme);
     particlesJavaScript();
 }
 
-// Mobile Menu
+// ✅ Menu mobile
 function mobileMenu() {
     const mobileMenu = document.querySelector("#mobileMenu");
     const nav = document.querySelector("nav");
@@ -34,7 +28,9 @@ function mobileMenu() {
 
     mobileMenu.addEventListener("click", function (e) {
         nav.classList.toggle("active");
-        mobileMenu.innerHTML = nav.classList.contains("active") ? '<i class="las la-times"></i>' : '<i class="las la-bars"></i>';
+        mobileMenu.innerHTML = nav.classList.contains("active")
+            ? '<i class="las la-times"></i>'
+            : '<i class="las la-bars"></i>';
         e.stopPropagation();
     });
 
@@ -53,12 +49,12 @@ function mobileMenu() {
     });
 }
 
-// Typed.js
+// ✅ Typed.js animation
 function typedText() {
     const typingElement = document.querySelector("#typing-text");
     if (!typingElement) return;
 
-    if (typingElement && typeof Typed !== "undefined") {
+    if (typeof Typed !== "undefined") {
         new Typed(typingElement, {
             strings: ['Full Stack Developer', 'UI UX Designer'],
             typeSpeed: 70,
@@ -72,3 +68,5 @@ function typedText() {
     }
 }
 
+   
+     
